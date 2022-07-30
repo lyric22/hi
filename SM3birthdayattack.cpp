@@ -203,7 +203,7 @@ string SM3(string s)
     return V_n;
 }
 
-
+//生成随机字符串
 string randomstr(int l)
 {
     static string c= "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -223,17 +223,17 @@ int main() {
     string result = SM3(str);
     cout <<str<< "经SM3加密后为：" << result << endl;
     //生日攻击
-    //while (1)
-    //{
-    //    string a = randomstr(8);
-    //    string b = randomstr(8);
-    //    string result_a = SM3(a).substr(0, 6);//取前20bit相同
-    //    string result_b = SM3(b).substr(0, 6);
-    //    if (result_a == result_b) 
-    //    {
-    //        cout << a << "经SM3加密后为：" << SM3(a) << endl;
-    //        cout << b << "经SM3加密后为：" << SM3(b) << endl;
-    //        break;
-    //    }
-    //}
+    while (1)
+    {
+        string a = randomstr(8);
+        string b = randomstr(8);
+        string result_a = SM3(a).substr(0, 6);//取前20bit相同
+        string result_b = SM3(b).substr(0, 6);
+        if (result_a == result_b) 
+        {
+            cout << a << "经SM3加密后为：" << SM3(a) << endl;
+            cout << b << "经SM3加密后为：" << SM3(b) << endl;
+            break;
+        }
+    }
 }
