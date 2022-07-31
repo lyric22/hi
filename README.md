@@ -3,7 +3,7 @@
 SM3birthdayattack在master中
 
 # 完成人  
-王菲 201900150110 lyric23
+王菲 201900150110 lyric22
 
 # 所做项目
 1.Project: implement the naïve birthday attack of reduced SM3（在master中）    
